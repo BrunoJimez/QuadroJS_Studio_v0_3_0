@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import * as E from './runtime/engine.js';
+import { defaultProject, timelineFor } from './runtime/scenes.js';
+const p=defaultProject();
+const tl=timelineFor(p);
+assert.equal(tl.length,6);
+assert.ok(Math.abs(tl.at(-1).end-p.duration)<1e-9);
+assert.equal(E.clamp(-1),0); assert.equal(E.clamp(2),1);
+const r1=E.mulberry32(42), r2=E.mulberry32(42);
+for(let i=0;i<20;i++)assert.equal(r1(),r2());
+for(const x of [0,.2,.5,.9,1])assert.ok(E.smooth(x)>=0&&E.smooth(x)<=1);
+console.log('OK: engine determinístico, timeline e easing validados.');

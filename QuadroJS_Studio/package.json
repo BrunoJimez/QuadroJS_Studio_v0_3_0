@@ -1,0 +1,14 @@
+{
+  "name": "quadrojs-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Estúdio local de cinema procedural em JavaScript Canvas, sem assets de imagem/vídeo.",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node tools-check.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

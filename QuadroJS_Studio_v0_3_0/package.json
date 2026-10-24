@@ -1,0 +1,13 @@
+{
+  "name": "quadrojs-studio",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Estúdio cinematográfico procedural local: direção por IA, continuidade, JavaScript Canvas, áudio e MP4.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test.mjs",
+    "check": "node tools-check.mjs"
+  },
+  "engines": {"node": ">=22"}
+}
